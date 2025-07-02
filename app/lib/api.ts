@@ -1,4 +1,4 @@
-const API_BASE_URL = 'http://localhost:5000';
+const API_BASE_URL = 'https://pandemia-api-3.onrender.com';
 
 export const fetchPandemias = async () => {
   const response = await fetch(`${API_BASE_URL}/pandemias`);
