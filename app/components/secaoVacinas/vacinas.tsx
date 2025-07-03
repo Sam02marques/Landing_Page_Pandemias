@@ -5,12 +5,12 @@ import { FaSyringe } from 'react-icons/fa';
 interface VacinasSectionProps {
   vacinas: Vacina[];
 }
-
+//COMPONENTE DOS DADOS DE VACINAS
 export function VacinasSection({ vacinas }: VacinasSectionProps) {
   return (
     <section id="vacinas" className="p-6 bg-white rounded-lg shadow-md">
       <h2 className="flex items-center text-2xl font-semibold mb-4">
-        <FaSyringe className="mr-2 text-blue-500" /> Vacinas Desenvolvidas
+        <FaSyringe className="mr-2 text-green-500" /> Vacinas Desenvolvidas
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {vacinas.map((vacina) => (

@@ -1,8 +1,8 @@
-// DEFININDO OS TIPOS DE CADA ROTA GET
+// DEFININDO OS TIPOS DE DADOS DE CADA ROTA GET
 export interface Pandemia {
     id: number;
     nomePandemia: string;
-    período: string;
+    periodo: string;
     sintomas: string;
     descricao: string;
     regiao: string;

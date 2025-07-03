@@ -25,7 +25,7 @@ export function PandemiasSection({ pandemias }: PandemiasSectionProps) {
             transition={{ duration: 0.5, delay: index * 0.1 }}
           >
             <h3 className="text-xl font-semibold text-gray-900">{pandemia.nomePandemia}</h3>
-            <p className="text-sm text-red-700 font-medium my-1">Século {pandemia.período}</p>
+            <p className="text-sm text-red-700 font-medium my-1">Período: {pandemia.periodo}</p>
             <p className="text-gray-600 mt-2">{pandemia.descricao}</p>
           </motion.div>
         ))}

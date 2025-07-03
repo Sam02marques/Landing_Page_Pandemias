@@ -9,6 +9,7 @@ import {FakeNewsSection} from './components/secaoFakeNews/fakeNews';
 import { fetchPandemias, fetchVacinas, fetchFakeNews } from './lib/api';
 import { Pandemia, Vacina, FakeNews } from './types/api';
 
+
 export default function Home() {
   const [pandemias, setPandemias] = useState<Pandemia[]>([]);
   const [vacinas, setVacinas] = useState<Vacina[]>([]);
@@ -39,7 +40,7 @@ export default function Home() {
   }, []);
 
   if (loading) {
-    return <div className="flex justify-center items-center min-h-screen">Carregando...</div>;
+    return <div className="flex justify-center items-center min-h-screen">Carregando a página...</div>;
   }
 
   if (error) {
@@ -54,7 +55,8 @@ export default function Home() {
         <FakeNewsSection fakeNews={fakeNews} />
       </main>
     </div>
+    
   );
+
+
 }
-
-
