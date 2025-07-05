@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-
+/* DEFINE O ESTILO DO BODY (FONTE, COR E COR DE FUNDO*/
 body {
   background: var(--background);
   color: var(--foreground);
