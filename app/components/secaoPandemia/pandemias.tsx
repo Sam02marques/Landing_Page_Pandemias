@@ -15,6 +15,22 @@ export function PandemiasSection({ pandemias }: PandemiasSectionProps) {
         <FaBiohazard className="mr-3 text-red-600" />
         Pandemias Históricas
       </h2>
+      <div className="flex justify-center mb-8">
+        <motion.img
+          src="/images/pandemia.png"
+          alt="Ilustração Pandemias"
+          className="h-80 object-contain"
+          animate={{
+        scale: [1, 1.15, 1],
+          }}
+          transition={{
+        duration: 1,
+        repeat: Infinity,
+        repeatType: "loop",
+        ease: "easeInOut",
+          }}
+        />
+      </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {pandemias.map((pandemia, index) => (
           <motion.div

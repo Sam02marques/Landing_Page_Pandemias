@@ -8,7 +8,7 @@ import {VacinasSection} from './components/secaoVacinas/vacinas';
 import {FakeNewsSection} from './components/secaoFakeNews/fakeNews';
 import { fetchPandemias, fetchVacinas, fetchFakeNews } from './lib/api';
 import { Pandemia, Vacina, FakeNews } from './types/api';
-
+import {IntroSection} from './components/secaoIntro/intro';
 
 export default function Home() {
   const [pandemias, setPandemias] = useState<Pandemia[]>([]);
@@ -40,7 +40,14 @@ export default function Home() {
   }, []);
 
   if (loading) {
-    return <div className="flex justify-center items-center min-h-screen">Carregando a página...</div>;
+    return (
+      <div className="flex flex-col justify-center items-center min-h-screen">
+        <div className="w-64 h-2 bg-gray-200 rounded-full overflow-hidden mb-4">
+          <div className="h-full bg-blue-500 animate-pulse" style={{ width: '80%' }} />
+        </div>
+        <span>Carregando a página...</span>
+      </div>
+    );
   }
 
   if (error) {
@@ -50,6 +57,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gray-50">
       <main className="container mx-auto py-12 space-y-20">
+        <IntroSection/>
         <PandemiasSection pandemias={pandemias} />
         <VacinasSection vacinas={vacinas} />
         <FakeNewsSection fakeNews={fakeNews} />

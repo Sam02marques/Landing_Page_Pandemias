@@ -1,7 +1,7 @@
 import { Vacina } from '@app/types/api';
 import { motion } from 'framer-motion';
 import { FaSyringe } from 'react-icons/fa';
-
+import Image from 'next/image';
 interface VacinasSectionProps {
   vacinas: Vacina[];
 }
@@ -12,6 +12,15 @@ export function VacinasSection({ vacinas }: VacinasSectionProps) {
       <h2 className="flex items-center text-2xl font-semibold mb-4">
         <FaSyringe className="mr-2 text-green-500" /> Vacinas Desenvolvidas
       </h2>
+      <div className="flex justify-center mb-8">
+        <Image
+          src="/images/vacina.png"
+          alt="Ilustração de Vacina"
+          width={2048}
+          height={2048}
+          className="h-60 object-contain transition-transform duration-300 hover:scale-110"
+        />
+      </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {vacinas.map((vacina) => (
           <motion.div
