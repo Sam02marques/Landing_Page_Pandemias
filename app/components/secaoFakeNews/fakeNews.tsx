@@ -2,6 +2,7 @@ import { FakeNews } from '@app/types/api';
 import { motion } from 'framer-motion';
 import { FaTimesCircle, FaCheckCircle } from 'react-icons/fa';
 import { FaExclamationTriangle } from 'react-icons/fa';
+import Image from 'next/image';
 interface FakeNewsSectionProps {
   fakeNews: FakeNews[];
 }
@@ -14,9 +15,11 @@ export function FakeNewsSection({ fakeNews }: FakeNewsSectionProps) {
         Fake News e Fatos
       </h2>
       <div className="flex justify-center mb-8">
-        <img
+        <Image
           src="/images/noticias.png"
           alt="Ilustração de um jornal escrito Fake News"
+          width={2048}
+          height={2048}
           className="h-60 object-contain transition-transform duration-300 hover:scale-110"
         />
       </div>
