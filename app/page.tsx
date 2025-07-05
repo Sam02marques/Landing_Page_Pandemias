@@ -21,13 +21,9 @@ import { Pandemia, Vacina, FakeNews } from './types/api';
 // COMPONENTE PRINCIPAL DA PÁGINA HOME
 export default function Home() {
 
-  // ESTADO PARA ARMAZENAR OS DADOS DE PANDEMIAS
+  // ESTADO PARA ARMAZENAR OS DADOS DE PANDEMIAS, VACINAS E FAKENEWS
   const [pandemias, setPandemias] = useState<Pandemia[]>([]);
-
-  // ESTADO PARA ARMAZENAR OS DADOS DE VACINAS
   const [vacinas, setVacinas] = useState<Vacina[]>([]);
-
-  // ESTADO PARA ARMAZENAR OS DADOS DE FAKE NEWS
   const [fakeNews, setFakeNews] = useState<FakeNews[]>([]);
 
   // ESTADO PARA SABER SE OS DADOS AINDA ESTÃO SENDO CARREGADOS
@@ -68,14 +64,23 @@ export default function Home() {
     loadData();
   }, []);
 
-  // SE AINDA ESTIVER CARREGANDO, EXIBE UMA TELA DE LOADING
+  // SE AINDA ESTIVER CARREGANDO, EXIBE UMA TELA DE LOADING COM ANIMAÇÃO DE UM ELEMENTO SE MOVENDO DA ESQUERDA PARA DIREITA
   if (loading) {
     return (
       <div className="flex flex-col justify-center items-center min-h-screen">
-        <div className="w-64 h-2 bg-gray-200 rounded-full overflow-hidden mb-4">
-          <div className="h-full bg-blue-500 animate-pulse" style={{ width: '80%' }} />
+        <div className="relative w-64 h-4 bg-gray-200 rounded-full overflow-hidden mb-4">
+          <div
+            className="absolute top-0 left-0 h-4 w-12 bg-blue-500 rounded-full animate-move-x"
+            style={{ animation: 'move-x 1.2s linear infinite' }}
+          />
         </div>
         <span>Carregando a página...</span>
+        <style jsx>{`
+          @keyframes move-x {
+            0% { left: 0; }
+            100% { left: 100%; }
+          }
+        `}</style>
       </div>
     );
   }
