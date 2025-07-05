@@ -87,7 +87,7 @@ Você pode acessar o repositório da API no link abaixo:
 
 ## Contribuições Futuras
 
-Contribuições são muito bem aceitas! Se você deseja contribuir com este projeto, por favor:
+Contribuições são muito bem aceitas!! Se você deseja contribuir com este projeto, por favor:
 
 1. Faça um fork do repositório
 2. Crie uma branch para sua feature (git checkout -b feature/nova-feature)
