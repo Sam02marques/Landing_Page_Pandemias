@@ -1,4 +1,6 @@
-const API_BASE_URL = 'https://pandemia-api-3.onrender.com';
+ //USEI O FETCH A PARTIR DO DEPLOY DA API QUE FIZ NO RENDER
+
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL;
 
 export const fetchPandemias = async () => {
   const response = await fetch(`${API_BASE_URL}/pandemias`);
