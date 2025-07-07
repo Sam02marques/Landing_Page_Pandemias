@@ -54,7 +54,7 @@ const Footer = () => {
 
         {/* TEXTO COM O ANO E DIREITOS RESERVADOS */}
         <p className="text-gray-600 text-xs mt-2">
-          &copy; {currentYear} Todos os direitos reservados.
+          &copy; {currentYear} Lançado sob a Licença MIT.
         </p>
       </div>
     </footer>
